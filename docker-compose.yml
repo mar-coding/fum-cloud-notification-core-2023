@@ -1,0 +1,30 @@
+# maintainer: MohammadAmin Rahimi
+version: "3.9"
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: db
+    ports:
+      - "5432:5432"
+  activemq:
+    image: webcenter/activemq:latest
+    environment:
+      ACTIVEMQ_ADMIN_LOGIN: admin
+      ACTIVEMQ_ADMIN_PASSWORD: admin
+    ports:
+      - "61616:61616"
+      - "8161:8161"
+  app:
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+      - activemq
+    # environment:
+    #   DATABASE_URL: postgres://postgres:mysecretpassword@db/mydatabase
