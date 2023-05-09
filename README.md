@@ -3,9 +3,13 @@
 
 ## Local Development
 
+
 To run this project locally, you will need to install the following dependencies:
 
-1. Java 17:
+1. ActiveMQ
+2. Postgresql
+
+3. Java 17:
 
    ```
    apt-get update
@@ -17,7 +21,7 @@ To run this project locally, you will need to install the following dependencies
 
    You can test the installation by running `java -version` in your terminal.
 
-2. Maven 3.6.3:
+4. Maven 3.6.3:
 
    ```
    sudo apt update
