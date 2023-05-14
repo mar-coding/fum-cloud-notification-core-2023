@@ -9,6 +9,11 @@ To run this project locally, you will need to install the following dependencies
 1. ActiveMQ
 2. Postgresql
 
+
+   ** If you want to run the project locally, you need to initialize your PostgreSQL database with this command:
+    ```
+    CREATE DATABASE test;
+    ```
 3. Java 17:
 
    ```
@@ -36,4 +41,8 @@ Run this project locally
   ```
    mvn clean install
    java -jar target/my-project-name.jar
+  ```
+Run this project on containers:
+  ```
+   docker compose up --build
   ```
