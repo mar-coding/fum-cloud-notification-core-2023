@@ -29,7 +29,8 @@ services:
     networks:
       - core_net
   app:
-    build: .
+    # build: .
+    image: amnrah/fum-cloud-notification-core-2023:cloud-v1.0.0
     container_name: coreApp
     restart: always
     ports:
