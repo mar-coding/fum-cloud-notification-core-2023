@@ -30,7 +30,7 @@ services:
       - core_net
   app:
     # build: .
-    image: amnrah/fum-cloud-notification-core-2023:cloud-v1.0.0
+    image: amnrah/fum-cloud-notification-core-2023:cloud-v1.1.0
     container_name: coreApp
     restart: always
     ports:
@@ -40,8 +40,11 @@ services:
       - activemq
     networks:
       - core_net
+      - shared_net
 volumes:
   dbCore:
 
 networks:
   core_net:
+  shared_net:
+    external: true
