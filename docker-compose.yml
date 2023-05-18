@@ -19,6 +19,7 @@ services:
       - core_net
   activemq:
     container_name: coreMq
+    restart: always
     image: webcenter/activemq:latest
     environment:
       ACTIVEMQ_ADMIN_LOGIN: admin
